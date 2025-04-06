@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Links | Connect With Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .link-card {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        .link-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .profile-pic {
+            border: 3px solid rgba(255,255,255,0.8);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center py-12 px-4">
+    <div class="w-full max-w-md mx-auto">
+        <!-- Profile Section -->
+        <div class="flex flex-col items-center mb-8">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                 alt="Profile Picture" 
+                 class="w-24 h-24 rounded-full object-cover profile-pic mb-4">
+            <h1 class="text-2xl font-bold text-gray-800">@YourUsername</h1>
+            <p class="text-gray-600 mt-2 text-center max-w-xs">Digital creator | Content maker | Sharing my journey</p>
+        </div>
+        
+        <!-- Links Section -->
+        <div class="space-y-4 mb-8">
+            <a href="#" class="block">
+                <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-4">
+                        <i class="fab fa-youtube text-blue-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800">YouTube Channel</h3>
+                        <p class="text-sm text-gray-500">Watch my latest videos</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="block">
+                <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
+                    <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mr-4">
+                        <i class="fab fa-instagram text-purple-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800">Instagram</h3>
+                        <p class="text-sm text-gray-500">Daily updates & stories</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="block">
+                <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
+                    <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mr-4">
+                        <i class="fas fa-globe text-green-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800">Official Website</h3>
+                        <p class="text-sm text-gray-500">Learn more about my work</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="block">
+                <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
+                    <div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mr-4">
+                        <i class="fas fa-envelope text-red-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800">Contact Me</h3>
+                        <p class="text-sm text-gray-500">Business inquiries</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="block">
+                <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
+                    <div class="w-10 h-10 rounded-lg bg-yellow-100 flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-yellow-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800">Blog</h3>
+                        <p class="text-sm text-gray-500">Read my latest articles</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Social Icons -->
+        <div class="flex justify-center space-x-6 mb-8">
+            <a href="#" class="text-gray-600 hover:text-blue-500 transition-colors">
+                <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-pink-500 transition-colors">
+                <i class="fab fa-tiktok text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-red-500 transition-colors">
+                <i class="fab fa-pinterest text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-blue-800 transition-colors">
+                <i class="fab fa-linkedin text-xl"></i>
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="text-center text-gray-500 text-sm">
+            <p>© 2023 Your Brand Name. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple animation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.link-card');
+            links.forEach((link, index) => {
+                setTimeout(() => {
+                    link.style.opacity = '1';
+                    link.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>
