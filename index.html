@@ -3,147 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Links | Connect With Me</title>
+    <title>Motohorek | My Links</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
-        
-        .link-card {
-            transition: all 0.3s ease;
-            transform: translateY(0);
-        }
-        
-        .link-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .profile-pic {
-            border: 3px solid rgba(255,255,255,0.8);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .bg-glass {
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="flex flex-col items-center py-12 px-4">
     <div class="w-full max-w-md mx-auto">
         <!-- Profile Section -->
-        <div class="flex flex-col items-center mb-8">
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
-                 alt="Profile Picture" 
+        <div class="flex flex-col items-center mb-8 relative">
+            <div class="absolute top-0 right-0" id="language-switcher">
+                <div class="relative inline-block text-left">
+                    <div>
+                        <button type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="options-menu" aria-haspopup="true" aria-expanded="true">
+                            Language
+                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden" role="menu" aria-orientation="vertical" aria-labelledby="options-menu" id="language-dropdown">
+                        <div class="py-1" role="none">
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" data-lang="en">English</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" data-lang="es">Español</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" data-lang="ru">Русский</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="/Users/batman/Library/Containers/ru.keepcoder.Telegram/Data/tmp/telegram-peer-photo-size-2-3906959817791612844-1-0-0.jpg" 
+                 alt="Motohorek Profile Picture" 
                  class="w-24 h-24 rounded-full object-cover profile-pic mb-4">
-            <h1 class="text-2xl font-bold text-gray-800">@YourUsername</h1>
-            <p class="text-gray-600 mt-2 text-center max-w-xs">Digital creator | Content maker | Sharing my journey</p>
+            <h1 class="text-2xl font-bold text-gray-800" data-translate="username">@motohorek</h1>
+            <p class="text-gray-600 mt-2 text-center max-w-xs" data-translate="description">Travel Creator | Adventurer | Sharing my journey around the world</p>
         </div>
         
         <!-- Links Section -->
         <div class="space-y-4 mb-8">
-            <a href="#" class="block">
+            <a href="https://www.youtube.com/channel/UCm8_muBU1DW_fmPCWs3ju5w" class="block" target="_blank" rel="noopener noreferrer">
                 <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
                     <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-4">
                         <i class="fab fa-youtube text-blue-500 text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-medium text-gray-800">YouTube Channel</h3>
-                        <p class="text-sm text-gray-500">Watch my latest videos</p>
+                        <h3 class="font-medium text-gray-800" data-translate="youtube_title">YouTube Channel</h3>
+                        <p class="text-sm text-gray-500" data-translate="youtube_description">Watch my latest videos</p>
                     </div>
                 </div>
             </a>
             
-            <a href="#" class="block">
+            <a href="https://www.instagram.com/motohorek_travel/" class="block" target="_blank" rel="noopener noreferrer">
                 <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
                     <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mr-4">
                         <i class="fab fa-instagram text-purple-500 text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-medium text-gray-800">Instagram</h3>
-                        <p class="text-sm text-gray-500">Daily updates & stories</p>
+                        <h3 class="font-medium text-gray-800" data-translate="instagram_title">Instagram</h3>
+                        <p class="text-sm text-gray-500" data-translate="instagram_description">Daily updates & stories</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://t.me/motohorek" class="block" target="_blank" rel="noopener noreferrer">
+                <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
+                    <div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center mr-4">
+                        <i class="fab fa-telegram text-sky-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-800" data-translate="telegram_title">Telegram</h3>
+                        <p class="text-sm text-gray-500" data-translate="telegram_description">Join my Telegram channel</p>
                     </div>
                 </div>
             </a>
             
-            <a href="#" class="block">
+            <a href="https://motohorek.life" class="block" target="_blank" rel="noopener noreferrer">
                 <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
                     <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mr-4">
                         <i class="fas fa-globe text-green-500 text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-medium text-gray-800">Official Website</h3>
-                        <p class="text-sm text-gray-500">Learn more about my work</p>
+                        <h3 class="font-medium text-gray-800" data-translate="website_title">Official Website</h3>
+                        <p class="text-sm text-gray-500" data-translate="website_description">Learn more about my work</p>
                     </div>
                 </div>
             </a>
             
-            <a href="#" class="block">
+            <a href="https://motohorek.life/sotrudnichestvo/" class="block" target="_blank" rel="noopener noreferrer">
                 <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
                     <div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mr-4">
                         <i class="fas fa-envelope text-red-500 text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-medium text-gray-800">Contact Me</h3>
-                        <p class="text-sm text-gray-500">Business inquiries</p>
+                        <h3 class="font-medium text-gray-800" data-translate="contact_title">Contact Me</h3>
+                        <p class="text-sm text-gray-500" data-translate="contact_description">Business inquiries</p>
                     </div>
                 </div>
             </a>
             
-            <a href="#" class="block">
+            <a href="https://motohorek.life" class="block" target="_blank" rel="noopener noreferrer">
                 <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
                     <div class="w-10 h-10 rounded-lg bg-yellow-100 flex items-center justify-center mr-4">
                         <i class="fas fa-book text-yellow-500 text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-medium text-gray-800">Blog</h3>
-                        <p class="text-sm text-gray-500">Read my latest articles</p>
+                        <h3 class="font-medium text-gray-800" data-translate="blog_title">Blog</h3>
+                        <p class="text-sm text-gray-500" data-translate="blog_description">Read my latest articles</p>
                     </div>
                 </div>
             </a>
         </div>
         
-        <!-- Social Icons -->
-        <div class="flex justify-center space-x-6 mb-8">
-            <a href="#" class="text-gray-600 hover:text-blue-500 transition-colors">
-                <i class="fab fa-twitter text-xl"></i>
-            </a>
-            <a href="#" class="text-gray-600 hover:text-pink-500 transition-colors">
-                <i class="fab fa-tiktok text-xl"></i>
-            </a>
-            <a href="#" class="text-gray-600 hover:text-red-500 transition-colors">
-                <i class="fab fa-pinterest text-xl"></i>
-            </a>
-            <a href="#" class="text-gray-600 hover:text-blue-800 transition-colors">
-                <i class="fab fa-linkedin text-xl"></i>
-            </a>
-        </div>
-        
         <!-- Footer -->
         <div class="text-center text-gray-500 text-sm">
-            <p>© 2023 Your Brand Name. All rights reserved.</p>
+            <p data-translate="footer_text">© <span id="year">2023</span> Motohorek. All rights reserved.</p>
         </div>
     </div>
 
-    <script>
-        // Simple animation on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const links = document.querySelectorAll('.link-card');
-            links.forEach((link, index) => {
-                setTimeout(() => {
-                    link.style.opacity = '1';
-                    link.style.transform = 'translateY(0)';
-                }, 100 * index);
-            });
-        });
-    </script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

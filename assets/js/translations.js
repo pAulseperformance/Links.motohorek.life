@@ -1,0 +1,53 @@
+export const translations = {
+    en: {
+        username: '@motohorek',
+        description: 'Travel Creator | Adventurer | Sharing my journey around the world',
+        youtube_title: 'YouTube Channel',
+        youtube_description: 'Watch my latest videos',
+        instagram_title: 'Instagram',
+        instagram_description: 'Daily updates & stories',
+        telegram_title: 'Telegram',
+        telegram_description: 'Join my Telegram channel',
+        website_title: 'Official Website',
+        website_description: 'Learn more about my work',
+        contact_title: 'Contact Me',
+        contact_description: 'Business inquiries',
+        blog_title: 'Blog',
+        blog_description: 'Read my latest articles',
+        footer_text: `© ${new Date().getFullYear()} Motohorek. All rights reserved.`
+    },
+    es: {
+        username: '@motohorek',
+        description: 'Creador de Viajes | Aventurero | Compartiendo mi viaje por el mundo',
+        youtube_title: 'Canal de YouTube',
+        youtube_description: 'Mira mis últimos videos',
+        instagram_title: 'Instagram',
+        instagram_description: 'Actualizaciones diarias e historias',
+        telegram_title: 'Telegram',
+        telegram_description: 'Únete a mi canal de Telegram',
+        website_title: 'Sitio Web Oficial',
+        website_description: 'Aprende más sobre mi trabajo',
+        contact_title: 'Contáctame',
+        contact_description: 'Consultas de negocios',
+        blog_title: 'Blog',
+        blog_description: 'Lee mis últimos artículos',
+        footer_text: `© ${new Date().getFullYear()} Motohorek. Todos los derechos reservados.`
+    },
+    ru: {
+        username: '@motohorek',
+        description: 'Создатель Путешествий | Авантюрист | Делюсь своим путешествием по миру',
+        youtube_title: 'YouTube канал',
+        youtube_description: 'Смотрите мои последние видео',
+        instagram_title: 'Instagram',
+        instagram_description: 'Ежедневные обновления и истории',
+        telegram_title: 'Telegram',
+        telegram_description: 'Присоединяйтесь к моему каналу в Telegram',
+        website_title: 'Официальный сайт',
+        website_description: 'Узнайте больше о моей работе',
+        contact_title: 'Свяжитесь со мной',
+        contact_description: 'Деловые запросы',
+        blog_title: 'Блог',
+        blog_description: 'Читайте мои последние статьи',
+        footer_text: `© ${new Date().getFullYear()} Motohorek. Все права защищены.`
+    }
+};
