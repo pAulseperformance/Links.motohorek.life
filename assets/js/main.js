@@ -14,8 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageDropdown = document.getElementById('language-dropdown');
     const optionsMenu = document.getElementById('options-menu');
 
-    optionsMenu.addEventListener('click', () => {
+    optionsMenu.addEventListener('click', (event) => {
+        event.stopPropagation();
         languageDropdown.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!languageSwitcher.contains(event.target)) {
+            languageDropdown.classList.add('hidden');
+        }
     });
 
     languageDropdown.addEventListener('click', (e) => {
