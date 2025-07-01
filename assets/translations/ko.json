@@ -1,0 +1,17 @@
+{
+    "username": "@motohorek",
+    "description": "여행 크리에이터 | 모험가 | 전 세계를 여행하는 제 여정을 공유합니다",
+    "youtube_title": "유튜브 채널",
+    "youtube_description": "최신 동영상 보기",
+    "instagram_title": "인스타그램",
+    "instagram_description": "매일 업데이트 및 스토리",
+    "telegram_title": "텔레그램",
+    "telegram_description": "제 텔레그램 채널에 참여하세요",
+    "website_title": "공식 웹사이트",
+    "website_description": "제 작업에 대해 더 알아보기",
+    "contact_title": "문의하기",
+    "contact_description": "비즈니스 문의",
+    "blog_title": "블로그",
+    "blog_description": "최신 기사 읽기",
+    "footer_text": "© ${new Date().getFullYear()} Motohorek. 모든 권리 보유."
+}

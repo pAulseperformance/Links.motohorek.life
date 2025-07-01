@@ -1,0 +1,17 @@
+{
+    "username": "@motohorek",
+    "description": "यात्रा निर्माता | साहसी | दुनिया भर में अपनी यात्रा साझा कर रहा हूँ",
+    "youtube_title": "यूट्यूब चैनल",
+    "youtube_description": "मेरे नवीनतम वीडियो देखें",
+    "instagram_title": "इंस्टाग्राम",
+    "instagram_description": "दैनिक अपडेट और कहानियाँ",
+    "telegram_title": "टेलीग्राम",
+    "telegram_description": "मेरे टेलीग्राम चैनल से जुड़ें",
+    "website_title": "आधिकारिक वेबसाइट",
+    "website_description": "मेरे काम के बारे में और जानें",
+    "contact_title": "मुझसे संपर्क करें",
+    "contact_description": "व्यावसायिक पूछताछ",
+    "blog_title": "ब्लॉग",
+    "blog_description": "मेरे नवीनतम लेख पढ़ें",
+    "footer_text": "© ${new Date().getFullYear()} Motohorek. सर्वाधिकार सुरक्षित।"
+}

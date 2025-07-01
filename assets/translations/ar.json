@@ -1,0 +1,17 @@
+{
+    "username": "@motohorek",
+    "description": "صانع محتوى سفر | مغامر | أشارك رحلتي حول العالم",
+    "youtube_title": "قناة يوتيوب",
+    "youtube_description": "شاهد أحدث مقاطع الفيديو الخاصة بي",
+    "instagram_title": "انستغرام",
+    "instagram_description": "تحديثات وقصص يومية",
+    "telegram_title": "تلجرام",
+    "telegram_description": "انضم إلى قناتي على تليجرام",
+    "website_title": "الموقع الرسمي",
+    "website_description": "اعرف المزيد عن عملي",
+    "contact_title": "اتصل بي",
+    "contact_description": "استفسارات تجارية",
+    "blog_title": "مدونة",
+    "blog_description": "اقرأ أحدث مقالاتي",
+    "footer_text": "© ${new Date().getFullYear()} Motohorek. كل الحقوق محفوظة."
+}

@@ -1,0 +1,17 @@
+{
+    "username": "@motohorek",
+    "description": "Criador de viagens | Aventureiro | Compartilhando minha jornada ao redor do mundo",
+    "youtube_title": "Canal do YouTube",
+    "youtube_description": "Assista aos meus vídeos mais recentes",
+    "instagram_title": "Instagram",
+    "instagram_description": "Atualizações diárias e histórias",
+    "telegram_title": "Telegram",
+    "telegram_description": "Junte-se ao meu canal do Telegram",
+    "website_title": "Site oficial",
+    "website_description": "Saiba mais sobre o meu trabalho",
+    "contact_title": "Contate-me",
+    "contact_description": "Consultas de negócios",
+    "blog_title": "Blog",
+    "blog_description": "Leia meus artigos mais recentes",
+    "footer_text": "© ${new Date().getFullYear()} Motohorek. Todos os direitos reservados."
+}

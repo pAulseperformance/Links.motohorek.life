@@ -1,0 +1,17 @@
+{
+    "username": "@motohorek",
+    "description": "创作者 | 冒险家 | 分享我的环球之旅",
+    "youtube_title": "YouTube 频道",
+    "youtube_description": "观看我的最新视频",
+    "instagram_title": "Instagram",
+    "instagram_description": "每日更新和故事",
+    "telegram_title": "Telegram",
+    "telegram_description": "加入我的 Telegram 频道",
+    "website_title": "官方网站",
+    "website_description": "了解更多关于我的工作",
+    "contact_title": "联系我",
+    "contact_description": "商务咨询",
+    "blog_title": "博客",
+    "blog_description": "阅读我的最新文章",
+    "footer_text": "© ${new Date().getFullYear()} Motohorek. 版权所有。"
+}

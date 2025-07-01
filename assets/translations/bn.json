@@ -1,0 +1,17 @@
+{
+    "username": "@motohorek",
+    "description": "ভ্রমণ নির্মাতা | অভিযাত্রী | বিশ্বজুড়ে আমার যাত্রা শেয়ার করছি",
+    "youtube_title": "ইউটিউব চ্যানেল",
+    "youtube_description": "আমার সর্বশেষ ভিডিও দেখুন",
+    "instagram_title": "ইনস্টাগ্রাম",
+    "instagram_description": "দৈনিক আপডেট এবং গল্প",
+    "telegram_title": "টেলিগ্রাম",
+    "telegram_description": "আমার টেলিগ্রাম চ্যানেলে যোগ দিন",
+    "website_title": "অফিসিয়াল ওয়েবসাইট",
+    "website_description": "আমার কাজ সম্পর্কে আরও জানুন",
+    "contact_title": "আমার সাথে যোগাযোগ করুন",
+    "contact_description": "ব্যবসায়িক অনুসন্ধান",
+    "blog_title": "ব্লগ",
+    "blog_description": "আমার সর্বশেষ নিবন্ধ পড়ুন",
+    "footer_text": "© ${new Date().getFullYear()} Motohorek. সর্বস্বত্ব সংরক্ষিত।"
+}
