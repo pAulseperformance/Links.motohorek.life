@@ -8,7 +8,9 @@ body {
 
 .link-card {
     transition: all 0.3s ease;
-    transform: translateY(0);
+    transform: translateY(20px);
+    opacity: 0;
+    z-index: 10;
 }
 
 .link-card:hover {
@@ -25,4 +27,13 @@ body {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+}
+
+/* Language dropdown z-index fix */
+#language-switcher {
+    z-index: 50;
+}
+
+#language-dropdown {
+    z-index: 60;
 }

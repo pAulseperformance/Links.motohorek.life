@@ -1,4 +1,4 @@
-import { translations } from './translations.js';
+import { translations, loadTranslation } from './translations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.link-card');
@@ -25,16 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    languageDropdown.addEventListener('click', (e) => {
+    languageDropdown.addEventListener('click', async (e) => {
         if (e.target.tagName === 'A') {
             const lang = e.target.dataset.lang;
-            for (const key in translations[lang]) {
+            const langData = await loadTranslation(lang);
+            
+            for (const key in langData) {
                 const element = document.querySelector(`[data-translate="${key}"]`);
                 if (element) {
                     if (key === 'footer_text') {
-                        element.innerHTML = translations[lang][key].replace('${new Date().getFullYear()}', new Date().getFullYear());
+                        // Handle both template string format and direct year format
+                        let footerText = langData[key];
+                        if (footerText.includes('${new Date().getFullYear()}')) {
+                            footerText = footerText.replace('${new Date().getFullYear()}', new Date().getFullYear());
+                        }
+                        element.innerHTML = footerText;
                     } else {
-                        element.textContent = translations[lang][key];
+                        element.textContent = langData[key];
                     }
                 }
             }

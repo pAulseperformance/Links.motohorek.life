@@ -1,5 +1,7 @@
+// Initialize translations object with inline English, Spanish, and Russian
 export const translations = {
     en: {
+        language_selector: 'Language',
         username: '@motohorek',
         description: 'Travel Creator | Adventurer | Sharing my journey around the world',
         youtube_title: 'YouTube Channel',
@@ -10,13 +12,20 @@ export const translations = {
         telegram_description: 'Join my Telegram channel',
         website_title: 'Official Website',
         website_description: 'Learn more about my work',
-        contact_title: 'Contact Me',
+        tiktok_title: 'TikTok',
+        tiktok_description: 'Watch my latest videos',
+        contact_title: 'Contact for business',
         contact_description: 'Business inquiries',
         blog_title: 'Blog',
         blog_description: 'Read my latest articles',
-        footer_text: `© ${new Date().getFullYear()} Motohorek. All rights reserved.`
+        donations_title: 'Donations',
+        donations_description: 'Support my work',
+        consultation_title: 'Consultation',
+        consultation_description: 'Book a consultation with me',
+        footer_text: '© 2025 Motohorek. All rights reserved.'
     },
     es: {
+        language_selector: 'Idioma',
         username: '@motohorek',
         description: 'Creador de Viajes | Aventurero | Compartiendo mi viaje por el mundo',
         youtube_title: 'Canal de YouTube',
@@ -27,13 +36,20 @@ export const translations = {
         telegram_description: 'Únete a mi canal de Telegram',
         website_title: 'Sitio Web Oficial',
         website_description: 'Aprende más sobre mi trabajo',
-        contact_title: 'Contáctame',
+        tiktok_title: 'TikTok',
+        tiktok_description: 'Mira mis últimos videos',
+        contact_title: 'Contacto para negocios',
         contact_description: 'Consultas de negocios',
         blog_title: 'Blog',
         blog_description: 'Lee mis últimos artículos',
-        footer_text: `© ${new Date().getFullYear()} Motohorek. Todos los derechos reservados.`
+        donations_title: 'Donaciones',
+        donations_description: 'Apoya mi trabajo',
+        consultation_title: 'Consulta',
+        consultation_description: 'Reserva una consulta conmigo',
+        footer_text: '© 2025 Motohorek. Todos los derechos reservados.'
     },
     ru: {
+        language_selector: 'Язык',
         username: '@motohorek',
         description: 'Создатель Путешествий | Авантюрист | Делюсь своим путешествием по миру',
         youtube_title: 'YouTube канал',
@@ -44,10 +60,37 @@ export const translations = {
         telegram_description: 'Присоединяйтесь к моему каналу в Telegram',
         website_title: 'Официальный сайт',
         website_description: 'Узнайте больше о моей работе',
-        contact_title: 'Свяжитесь со мной',
+        tiktok_title: 'TikTok',
+        tiktok_description: 'Смотрите мои последние видео',
+        contact_title: 'Контакт для бизнеса',
         contact_description: 'Деловые запросы',
         blog_title: 'Блог',
         blog_description: 'Читайте мои последние статьи',
-        footer_text: `© ${new Date().getFullYear()} Motohorek. Все права защищены.`
+        donations_title: 'Пожертвования',
+        donations_description: 'Поддержите мою работу',
+        consultation_title: 'Консультация',
+        consultation_description: 'Забронируйте консультацию со мной',
+        footer_text: '© 2025 Motohorek. Все права защищены.'
     }
 };
+
+// Function to load additional translation files dynamically
+export async function loadTranslation(lang) {
+    if (translations[lang]) {
+        return translations[lang];
+    }
+    
+    try {
+        const response = await fetch(`./assets/translations/${lang}.json`);
+        if (response.ok) {
+            const data = await response.json();
+            translations[lang] = data;
+            return data;
+        }
+    } catch (error) {
+        console.warn(`Failed to load translation for ${lang}:`, error);
+    }
+    
+    // Return English as fallback
+    return translations.en;
+}

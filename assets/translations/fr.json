@@ -1,17 +1,24 @@
 {
+    "language_selector": "Langue",
     "username": "@motohorek",
-    "description": "Créateur de voyages | Aventurier | Partageant mon voyage à travers le monde",
+    "description": "Créateur de voyage | Aventurier | Partageant mon voyage autour du monde",
     "youtube_title": "Chaîne YouTube",
     "youtube_description": "Regardez mes dernières vidéos",
     "instagram_title": "Instagram",
     "instagram_description": "Mises à jour quotidiennes et histoires",
     "telegram_title": "Telegram",
     "telegram_description": "Rejoignez ma chaîne Telegram",
-    "website_title": "Site officiel",
+    "website_title": "Site Web Officiel",
     "website_description": "En savoir plus sur mon travail",
+    "tiktok_title": "TikTok",
+    "tiktok_description": "Regardez mes dernières vidéos",
     "contact_title": "Contactez-moi",
-    "contact_description": "Demandes de renseignements commerciaux",
+    "contact_description": "Demandes commerciales",
     "blog_title": "Blog",
     "blog_description": "Lisez mes derniers articles",
-    "footer_text": "© ${new Date().getFullYear()} Motohorek. Tous droits réservés."
+    "donations_title": "Donations",
+    "donations_description": "Soutenez mon travail",
+    "consultation_title": "Consultation",
+    "consultation_description": "Réservez une consultation avec moi",
+    "footer_text": "© 2025 Motohorek. Tous droits réservés."
 }
