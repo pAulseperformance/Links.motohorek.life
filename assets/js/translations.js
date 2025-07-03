@@ -1,5 +1,8 @@
-// Initialize translations object with inline English, Spanish, and Russian
-export const translations = {
+// Translation system - Source of Truth
+// This file defines the English fallback and loads all other languages dynamically
+
+// English as the source of truth and fallback
+export const defaultTranslations = {
     en: {
         language_selector: 'Language',
         username: '@motohorek',
@@ -23,61 +26,33 @@ export const translations = {
         consultation_title: 'Consultation',
         consultation_description: 'Book a consultation with me',
         footer_text: '© 2025 Motohorek. All rights reserved.'
-    },
-    es: {
-        language_selector: 'Idioma',
-        username: '@motohorek',
-        description: 'Viajera | Creadora de contenido | 8 años de aventuras sin parar',
-        youtube_title: 'Canal de YouTube',
-        youtube_description: 'Mira mis últimos videos',
-        instagram_title: 'Instagram',
-        instagram_description: 'Actualizaciones diarias e historias',
-        telegram_title: 'Telegram',
-        telegram_description: 'Únete a mi canal de Telegram',
-        website_title: 'Sitio Web Oficial',
-        website_description: 'Sitio web oficial motohorek.life, 500+ artículos en mi blog de viajes',
-        tiktok_title: 'TikTok',
-        tiktok_description: 'Mira mis últimos videos',
-        contact_title: 'Contacto para negocios',
-        contact_description: 'Colaboración, contáctame para consultas de negocios',
-        blog_title: 'Apps que me ahorran $$$',
-        blog_description: 'Recursos útiles que me ahorran $$$ mientras viajo',
-        donations_title: 'Donaciones',
-        donations_description: 'Apoya mi trabajo',
-        consultation_title: 'Consulta',
-        consultation_description: 'Reserva una consulta conmigo',
-        footer_text: '© 2025 Motohorek. Todos los derechos reservados.'
-    },
-    ru: {
-        language_selector: 'Язык',
-        username: '@motohorek',
-        description: 'Путешественница | Создатель контента | 8 лет приключений без остановки',
-        youtube_title: 'YouTube канал',
-        youtube_description: 'Смотрите мои последние видео',
-        instagram_title: 'Instagram',
-        instagram_description: 'Ежедневные обновления и истории',
-        telegram_title: 'Telegram',
-        telegram_description: 'Присоединяйтесь к моему каналу в Telegram',
-        website_title: 'Официальный сайт',
-        website_description: 'Официальный сайт motohorek.life , 500+ статей в моем блоге о путешествиях',
-        tiktok_title: 'TikTok',
-        tiktok_description: 'Смотрите мои последние видео',
-        contact_title: 'Контакт для бизнеса',
-        contact_description: 'Сотрудничество, связаться со мной по рабочим вопросам',
-        blog_title: 'Приложения, которые экономят мне $$$',
-        blog_description: 'Полезные ресурсы , которые экономят мне $$$ в путешествиях',
-        donations_title: 'Пожертвования',
-        donations_description: 'Поддержите мою работу',
-        consultation_title: 'Консультация',
-        consultation_description: 'Забронируйте консультацию со мной',
-        footer_text: '© 2025 Motohorek. Все права защищены.'
     }
 };
 
-// Function to load additional translation files dynamically
+// Cache for loaded translations
+export const translations = { ...defaultTranslations };
+
+// Supported languages
+export const supportedLanguages = [
+    'en', 'es', 'ru', 'zh', 'hi', 'fr', 'ar', 'bn', 'pt', 'ur', 'ko'
+];
+
+// Function to load translation files dynamically
 export async function loadTranslation(lang) {
+    // Return cached translation if already loaded
     if (translations[lang]) {
         return translations[lang];
+    }
+    
+    // Don't try to load English from file, use default
+    if (lang === 'en') {
+        return defaultTranslations.en;
+    }
+    
+    // Check if language is supported
+    if (!supportedLanguages.includes(lang)) {
+        console.warn(`Language ${lang} is not supported, falling back to English`);
+        return defaultTranslations.en;
     }
     
     try {
@@ -86,11 +61,30 @@ export async function loadTranslation(lang) {
             const data = await response.json();
             translations[lang] = data;
             return data;
+        } else {
+            throw new Error(`Failed to fetch ${lang}.json: ${response.status}`);
         }
     } catch (error) {
         console.warn(`Failed to load translation for ${lang}:`, error);
+        // Return English as fallback
+        return defaultTranslations.en;
+    }
+}
+
+// Function to get all available language codes
+export function getAvailableLanguages() {
+    return supportedLanguages;
+}
+
+// Function to validate that a translation object has all required keys
+export function validateTranslation(translation, lang) {
+    const requiredKeys = Object.keys(defaultTranslations.en);
+    const missingKeys = requiredKeys.filter(key => !(key in translation));
+    
+    if (missingKeys.length > 0) {
+        console.warn(`Translation for ${lang} is missing keys:`, missingKeys);
+        return false;
     }
     
-    // Return English as fallback
-    return translations.en;
+    return true;
 }
