@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --bg-gradient-light: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --bg-gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --text-primary-light: #1f2937;
+    --text-primary-dark: #f9fafb;
+    --text-secondary-light: #6b7280;
+    --text-secondary-dark: #d1d5db;
+    --card-bg-light: #ffffff;
+    --card-bg-dark: #374151;
+    --card-hover-light: #f9fafb;
+    --card-hover-dark: #4b5563;
+    --border-light: #e5e7eb;
+    --border-dark: #4b5563;
+}
+
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: var(--bg-gradient-light);
+    color: var(--text-primary-light);
     min-height: 100vh;
 }
 
@@ -133,17 +149,250 @@ body {
     cursor: not-allowed;
 }
 
-/* Responsive design */
-@media (max-width: 640px) {
-    .language-dropdown {
-        width: 280px;
-        max-width: 90vw;
-        right: 0;
-        left: auto;
+/* Dark mode */
+body.dark-mode {
+    background: var(--bg-gradient-dark);
+    color: var(--text-primary-dark);
+}
+
+body.dark-mode .link-card {
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--border-dark);
+}
+
+body.dark-mode .link-card:hover {
+    background-color: var(--card-hover-dark);
+}
+
+body.dark-mode h1 {
+    color: var(--text-primary-dark);
+}
+
+body.dark-mode p {
+    color: var(--text-secondary-dark);
+}
+
+body.dark-mode .text-gray-800 {
+    color: var(--text-primary-dark) !important;
+}
+
+body.dark-mode .text-gray-600 {
+    color: var(--text-secondary-dark) !important;
+}
+
+body.dark-mode .text-gray-500 {
+    color: var(--text-secondary-dark) !important;
+}
+
+body.dark-mode .text-gray-700 {
+    color: var(--text-secondary-dark) !important;
+}
+
+/* Theme toggle button styles */
+#theme-toggle {
+    z-index: 50;
+}
+
+#theme-toggle-button {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+body.dark-mode #theme-toggle-button {
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--border-dark);
+}
+
+#theme-toggle-button:hover {
+    transform: translateY(-2px) scale(1.05);
+}
+
+#theme-icon {
+    transition: all 0.3s ease;
+}
+
+/* Language switcher dark mode styles */
+body.dark-mode #options-menu {
+    background-color: var(--card-bg-dark);
+    border-color: var(--border-dark);
+    color: var(--text-primary-dark);
+}
+
+body.dark-mode #options-menu:hover {
+    background-color: var(--card-hover-dark);
+}
+
+/* Enhanced Language Switcher Button Dark Mode */
+body.dark-mode #language-button,
+body.dark-mode .language-switcher-button {
+    background-color: var(--card-bg-dark) !important;
+    border-color: var(--border-dark) !important;
+    color: var(--text-primary-dark) !important;
+}
+
+body.dark-mode #language-button:hover,
+body.dark-mode .language-switcher-button:hover {
+    background-color: var(--card-hover-dark) !important;
+    border-color: var(--border-dark) !important;
+}
+
+body.dark-mode #language-button svg,
+body.dark-mode .language-switcher-button svg {
+    color: var(--text-secondary-dark) !important;
+}
+
+body.dark-mode #language-dropdown {
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--border-dark);
+}
+
+body.dark-mode #language-search {
+    background-color: var(--card-bg-dark);
+    border-color: var(--border-dark);
+    color: var(--text-primary-dark);
+}
+
+body.dark-mode #language-search::placeholder {
+    color: var(--text-secondary-dark);
+}
+
+body.dark-mode #language-search:focus {
+    background-color: var(--card-bg-dark);
+    border-color: #6366f1;
+    color: var(--text-primary-dark);
+}
+
+body.dark-mode .language-option {
+    color: var(--text-primary-dark) !important;
+    background-color: transparent;
+}
+
+body.dark-mode .language-option:hover {
+    background-color: rgba(99, 102, 241, 0.25) !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .language-option:focus {
+    background-color: rgba(99, 102, 241, 0.35) !important;
+    color: #ffffff !important;
+}
+
+/* Override Tailwind classes for language switcher button in dark mode */
+body.dark-mode .bg-white {
+    background-color: var(--card-bg-dark) !important;
+}
+
+body.dark-mode .border-gray-200 {
+    border-color: var(--border-dark) !important;
+}
+
+body.dark-mode .text-gray-700 {
+    color: var(--text-primary-dark) !important;
+}
+
+body.dark-mode .hover\:bg-gray-50:hover {
+    background-color: var(--card-hover-dark) !important;
+}
+
+body.dark-mode .hover\:border-gray-300:hover {
+    border-color: var(--border-dark) !important;
+}
+
+body.dark-mode .text-gray-400 {
+    color: var(--text-secondary-dark) !important;
+}
+
+/* More specific dark mode styles for language switcher elements */
+body.dark-mode .border-gray-100 {
+    border-color: var(--border-dark) !important;
+}
+
+body.dark-mode .border-gray-200 {
+    border-color: var(--border-dark) !important;
+}
+
+body.dark-mode .bg-gray-50 {
+    background-color: var(--card-hover-dark) !important;
+    color: var(--text-primary-dark) !important;
+}
+
+body.dark-mode .text-gray-500 {
+    color: var(--text-secondary-dark) !important;
+}
+
+body.dark-mode .hover\:bg-indigo-50:hover {
+    background-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+body.dark-mode .hover\:text-indigo-700:hover {
+    color: #ffffff !important;
+}
+
+body.dark-mode .bg-indigo-50 {
+    background-color: rgba(99, 102, 241, 0.35) !important;
+}
+
+body.dark-mode .text-indigo-700 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .text-indigo-600 {
+    color: #c7d2fe !important;
+}
+
+/* Ensure search input has proper styling in dark mode */
+body.dark-mode input[type="text"] {
+    background-color: var(--card-bg-dark) !important;
+    border-color: var(--border-dark) !important;
+    color: var(--text-primary-dark) !important;
+}
+
+body.dark-mode input[type="text"]:focus {
+    border-color: #6366f1 !important;
+    background-color: var(--card-bg-dark) !important;
+}
+
+/* Ensure dropdown text is readable */
+body.dark-mode #language-dropdown .text-gray-700 {
+    color: var(--text-primary-dark) !important;
+}
+
+body.dark-mode #language-dropdown a {
+    color: var(--text-primary-dark) !important;
+}
+
+body.dark-mode #language-dropdown a:hover {
+    color: #ffffff !important;
+    background-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+/* Ensure theme toggle button is always visible */
+#theme-toggle-button {
+    position: relative;
+    z-index: 100;
+}
+
+/* Smooth color transitions for icons */
+.fas,
+.fab {
+    transition: color 0.3s ease;
+}
+
+/* Smooth transitions for theme changes */
+body * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ensure proper spacing between theme toggle and language switcher */
+@media (max-width: 480px) {
+    #theme-toggle {
+        top: -10px;
+        left: -10px;
     }
 
-    .rtl .language-dropdown {
-        left: 0;
-        right: auto;
+    #language-switcher {
+        top: -10px;
+        right: -10px;
     }
 }

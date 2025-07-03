@@ -1,5 +1,6 @@
 import { TranslationManager } from './translations.js';
 import { LanguageSwitcher } from './components/LanguageSwitcher.js';
+import { ThemeToggle } from './components/ThemeToggle.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     // Initialize link animations
@@ -14,6 +15,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Update year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Initialize theme toggle
+    const themeToggle = new ThemeToggle();
+
     // Initialize translation system
     const translationManager = new TranslationManager();
     
@@ -22,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         showFlags: true,
         showNativeNames: true,
         position: 'top-right',
-        theme: 'light',
+        theme: themeToggle.getCurrentTheme(),
         animation: true
     });
 
@@ -31,6 +35,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log('Language changed to:', event.detail.language);
         
         // You can add additional logic here that should run when language changes
+        // For example, updating analytics, user preferences, etc.
+    });
+
+    // Listen for theme change events
+    document.addEventListener('themeChanged', (event) => {
+        console.log('Theme changed to:', event.detail.theme);
+        
+        // Update language switcher theme if it has the method
+        if (languageSwitcher && typeof languageSwitcher.updateTheme === 'function') {
+            languageSwitcher.updateTheme(event.detail.theme);
+        }
+        
+        // You can add additional logic here that should run when theme changes
         // For example, updating analytics, user preferences, etc.
     });
 
