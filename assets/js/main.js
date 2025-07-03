@@ -1,6 +1,8 @@
-import { translations, loadTranslation } from './translations.js';
+import { TranslationManager } from './translations.js';
+import { LanguageSwitcher } from './components/LanguageSwitcher.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    // Initialize link animations
     const links = document.querySelectorAll('.link-card');
     links.forEach((link, index) => {
         setTimeout(() => {
@@ -8,44 +10,35 @@ document.addEventListener('DOMContentLoaded', () => {
             link.style.transform = 'translateY(0)';
         }, 100 * index);
     });
+    
+    // Update year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    const languageSwitcher = document.getElementById('language-switcher');
-    const languageDropdown = document.getElementById('language-dropdown');
-    const optionsMenu = document.getElementById('options-menu');
-
-    optionsMenu.addEventListener('click', (event) => {
-        event.stopPropagation();
-        languageDropdown.classList.toggle('hidden');
+    // Initialize translation system
+    const translationManager = new TranslationManager();
+    
+    // Initialize enhanced language switcher
+    const languageSwitcher = new LanguageSwitcher(translationManager, {
+        showFlags: true,
+        showNativeNames: true,
+        position: 'top-right',
+        theme: 'light',
+        animation: true
     });
 
-    document.addEventListener('click', (event) => {
-        if (!languageSwitcher.contains(event.target)) {
-            languageDropdown.classList.add('hidden');
-        }
+    // Listen for language change events
+    document.addEventListener('languageChanged', (event) => {
+        console.log('Language changed to:', event.detail.language);
+        
+        // You can add additional logic here that should run when language changes
+        // For example, updating analytics, user preferences, etc.
     });
 
-    languageDropdown.addEventListener('click', async (e) => {
-        if (e.target.tagName === 'A') {
-            const lang = e.target.dataset.lang;
-            const langData = await loadTranslation(lang);
-            
-            for (const key in langData) {
-                const element = document.querySelector(`[data-translate="${key}"]`);
-                if (element) {
-                    if (key === 'footer_text') {
-                        // Handle both template string format and direct year format
-                        let footerText = langData[key];
-                        if (footerText.includes('${new Date().getFullYear()}')) {
-                            footerText = footerText.replace('${new Date().getFullYear()}', new Date().getFullYear());
-                        }
-                        element.innerHTML = footerText;
-                    } else {
-                        element.textContent = langData[key];
-                    }
-                }
-            }
-            languageDropdown.classList.add('hidden');
-        }
-    });
+    // Preload common languages for better performance
+    const commonLanguages = ['en', 'es', 'ru'];
+    try {
+        await languageSwitcher.preloadLanguages(commonLanguages);
+    } catch (error) {
+        console.warn('Failed to preload some languages:', error);
+    }
 });
