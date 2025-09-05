@@ -20,5 +20,11 @@
     "donations_description": "میرے کام کی حمایت کریں",
     "consultation_title": "مشاورت",
     "consultation_description": "میرے ساتھ مشاورت بک کریں",
+    "buymeacoffee_title": "Buy Me a Coffee",
+    "buymeacoffee_description": "کافی کے لیے میری مدد کریں",
+    "crypto_title": "کرپٹو ڈونیشن",
+    "crypto_description": "Bitcoin یا Ethereum سے عطیہ کریں",
+    "zelle_title": "Zelle",
+    "copy_email_button": "ای میل کاپی کریں",
     "footer_text": "© 2025 Motohorek. تمام حقوق محفوظ ہیں۔"
 }

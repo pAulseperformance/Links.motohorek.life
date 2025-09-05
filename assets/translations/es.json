@@ -18,6 +18,12 @@
     "blog_description": "Recursos útiles que me ahorran $$$ mientras viajo",
     "donations_title": "Donaciones",
     "donations_description": "Apoya mi trabajo",
+    "buymeacoffee_title": "Buy Me a Coffee",
+    "buymeacoffee_description": "Support me with a coffee donation",
+    "crypto_title": "Crypto Donation",
+    "crypto_description": "Support through cryptocurrency",
+    "zelle_title": "Zelle",
+    "copy_email_button": "Copy Email",
     "consultation_title": "Consulta",
     "consultation_description": "Reserva una consulta conmigo",
     "footer_text": "© 2025 Motohorek. Todos los derechos reservados."

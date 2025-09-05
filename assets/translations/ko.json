@@ -20,5 +20,11 @@
     "donations_description": "내 작업 지원하기",
     "consultation_title": "상담",
     "consultation_description": "상담 예약하기",
+    "buymeacoffee_title": "Buy Me a Coffee",
+    "buymeacoffee_description": "커피 한 잔으로 후원하기",
+    "crypto_title": "암호화폐 후원",
+    "crypto_description": "Bitcoin 또는 Ethereum으로 후원",
+    "zelle_title": "Zelle",
+    "copy_email_button": "이메일 복사",
     "footer_text": "© 2025 Motohorek. 모든 권리 보유."
 }

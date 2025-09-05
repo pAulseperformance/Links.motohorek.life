@@ -20,5 +20,11 @@
     "donations_description": "支持我的工作",
     "consultation_title": "咨询",
     "consultation_description": "预约我的咨询",
+    "buymeacoffee_title": "Buy Me a Coffee",
+    "buymeacoffee_description": "请我喝杯咖啡来支持我",
+    "crypto_title": "加密货币捐赠",
+    "crypto_description": "用Bitcoin或Ethereum捐赠",
+    "zelle_title": "Zelle",
+    "copy_email_button": "复制邮箱",
     "footer_text": "© 2025 Motohorek. 版权所有。"
 }

@@ -20,5 +20,11 @@
     "donations_description": "আমার কাজ সমর্থন করুন",
     "consultation_title": "পরামর্শ",
     "consultation_description": "আমার সাথে একটি পরামর্শ বুক করুন",
+    "buymeacoffee_title": "Buy Me a Coffee",
+    "buymeacoffee_description": "একটি কফির জন্য আমাকে সমর্থন করুন",
+    "crypto_title": "ক্রিপ্টো দান",
+    "crypto_description": "Bitcoin বা Ethereum দিয়ে দান করুন",
+    "zelle_title": "Zelle",
+    "copy_email_button": "ইমেইল কপি করুন",
     "footer_text": "© 2025 Motohorek. সমস্ত অধিকার সংরক্ষিত।"
 }

@@ -379,6 +379,65 @@ body.dark-mode #language-dropdown a:hover {
     transition: color 0.3s ease;
 }
 
+/* Donations Accordion Styles */
+.donations-accordion {
+    z-index: 10;
+}
+
+.donations-header {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+.donations-header:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.donations-content {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.donations-content.expanded {
+    max-height: 500px !important;
+    opacity: 1;
+}
+
+.donations-chevron {
+    transition: transform 0.3s ease;
+}
+
+.donations-chevron.rotated {
+    transform: rotate(180deg);
+}
+
+/* Dark mode styles for donations accordion */
+body.dark-mode .donations-header {
+    background-color: var(--card-bg-dark) !important;
+    border: 1px solid var(--border-dark) !important;
+    color: var(--text-primary-dark) !important;
+}
+
+body.dark-mode .donations-header:hover {
+    background-color: var(--card-hover-dark) !important;
+}
+
+body.dark-mode .donations-header h3,
+body.dark-mode .donations-header p {
+    color: var(--text-primary-dark) !important;
+}
+
+body.dark-mode .donations-header .text-gray-500 {
+    color: var(--text-secondary-dark) !important;
+}
+
+body.dark-mode .donations-chevron {
+    color: var(--text-secondary-dark) !important;
+}
+
 /* Smooth transitions for theme changes */
 body * {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;

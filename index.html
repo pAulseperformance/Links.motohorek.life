@@ -155,6 +155,62 @@
                     </div>
                 </div>
             </a>
+            
+            <div class="donations-accordion">
+                <button class="donations-header link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50 w-full text-left">
+                    <div class="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center mr-4">
+                        <i class="fas fa-coffee text-pink-500 text-xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-medium text-gray-800" data-translate="donations_title">Donations</h3>
+                        <p class="text-sm text-gray-500" data-translate="donations_description">Support my work</p>
+                    </div>
+                    <div class="ml-4">
+                        <i class="fas fa-chevron-down text-gray-400 text-lg transition-transform duration-300 donations-chevron"></i>
+                    </div>
+                </button>
+
+                <div class="donations-content overflow-hidden transition-all duration-300 max-h-0">
+                    <div class="mt-2 space-y-3 px-2">
+                        <a href="https://buymeacoffee.com/motohorek" class="block" target="_blank" rel="noopener noreferrer">
+                            <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
+                                <div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center mr-3">
+                                    <i class="fas fa-coffee text-orange-500 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800" data-translate="buymeacoffee_title">Buy Me a Coffee</h4>
+                                    <p class="text-xs text-gray-500" data-translate="buymeacoffee_description">Support me with a coffee donation</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://yourl.pinescriptstrategy.com/donations" class="block" target="_blank" rel="noopener noreferrer">
+                            <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md hover:bg-gray-50">
+                                <div class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center mr-3">
+                                    <i class="fas fa-bitcoin text-purple-500 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800" data-translate="crypto_title">Crypto Donation</h4>
+                                    <p class="text-xs text-gray-500" data-translate="crypto_description">Support through cryptocurrency</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="link-card bg-white rounded-xl p-4 flex items-center shadow-md">
+                            <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-dollar-sign text-blue-500 text-lg"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-medium text-gray-800" data-translate="zelle_title">Zelle</h4>
+                                <p class="text-xs text-gray-500 mb-2">motoxorek@gmail.com</p>
+                                <button onclick="navigator.clipboard.writeText('motoxorek@gmail.com'); this.textContent=this.getAttribute('data-copied-text'); setTimeout(() => this.textContent=this.getAttribute('data-original-text'), 2000);" class="text-xs bg-indigo-500 text-white px-2 py-1 rounded hover:bg-indigo-600 transition-colors" data-translate="copy_email_button" data-original-text="Copy Email" data-copied-text="Copied!">
+                                    Copy Email
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- Footer -->

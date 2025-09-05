@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         // For example, updating analytics, user preferences, etc.
     });
 
+    // Initialize donations accordion
+    initializeDonationsAccordion();
+
     // Preload common languages for better performance
     const commonLanguages = ['en', 'es', 'ru'];
     try {
@@ -59,3 +62,44 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.warn('Failed to preload some languages:', error);
     }
 });
+
+// Function to initialize donations accordion functionality
+function initializeDonationsAccordion() {
+    const donationsHeader = document.querySelector('.donations-header');
+    const donationsContent = document.querySelector('.donations-content');
+    const chevronIcon = document.querySelector('.donations-chevron');
+    
+    if (!donationsHeader || !donationsContent || !chevronIcon) {
+        console.warn('Donations accordion elements not found');
+        return;
+    }
+
+    donationsHeader.addEventListener('click', () => {
+        const isExpanded = donationsContent.classList.contains('expanded');
+        
+        if (isExpanded) {
+            // Collapse
+            donationsContent.classList.remove('expanded');
+            chevronIcon.classList.remove('rotated');
+            donationsHeader.setAttribute('aria-expanded', 'false');
+        } else {
+            // Expand
+            donationsContent.classList.add('expanded');
+            chevronIcon.classList.add('rotated');
+            donationsHeader.setAttribute('aria-expanded', 'true');
+        }
+    });
+
+    // Add keyboard support
+    donationsHeader.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            donationsHeader.click();
+        }
+    });
+
+    // Set initial ARIA attributes
+    donationsHeader.setAttribute('aria-expanded', 'false');
+    donationsHeader.setAttribute('aria-controls', 'donations-content');
+    donationsContent.setAttribute('id', 'donations-content');
+}
