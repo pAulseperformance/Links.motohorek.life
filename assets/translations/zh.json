@@ -26,5 +26,7 @@
     "crypto_description": "用Bitcoin或Ethereum捐赠",
     "zelle_title": "Zelle",
     "copy_email_button": "复制邮箱",
+    "stripe_donation_title": "通过 Stripe 捐赠",
+    "stripe_donation_description": "用安全的银行卡捐赠支持我",
     "footer_text": "© 2025 Motohorek. 版权所有。"
 }

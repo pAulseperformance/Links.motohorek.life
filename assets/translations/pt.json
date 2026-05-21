@@ -24,6 +24,8 @@
     "crypto_description": "Apoie através de criptomoeda",
     "zelle_title": "Zelle",
     "copy_email_button": "Copiar Email",
+    "stripe_donation_title": "Doar via Stripe",
+    "stripe_donation_description": "Apoie-me com uma doação segura por cartão",
     "consultation_title": "Consultoria",
     "consultation_description": "Agende uma consultoria comigo",
     "footer_text": "© 2025 Motohorek. Todos os direitos reservados."

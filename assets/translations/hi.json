@@ -26,5 +26,7 @@
     "crypto_description": "Bitcoin या Ethereum के साथ दान करें",
     "zelle_title": "Zelle",
     "copy_email_button": "ईमेल कॉपी करें",
+    "stripe_donation_title": "Stripe के माध्यम से दान करें",
+    "stripe_donation_description": "सुरक्षित कार्ड दान से मेरा समर्थन करें",
     "footer_text": "© 2025 Motohorek. सभी अधिकार सुरक्षित।"
 }

@@ -24,6 +24,8 @@
     "crypto_description": "الدعم عبر العملة المشفرة",
     "zelle_title": "Zelle",
     "copy_email_button": "نسخ البريد الإلكتروني",
+    "stripe_donation_title": "تبرع عبر Stripe",
+    "stripe_donation_description": "ادعمني بتبرع آمن بالبطاقة",
     "consultation_title": "استشارة",
     "consultation_description": "احجز استشارة معي",
     "footer_text": "© 2025 Motohorek. جميع الحقوق محفوظة."

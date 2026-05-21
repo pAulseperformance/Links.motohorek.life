@@ -242,6 +242,8 @@ const defaultTranslations = {
         blog_description: 'Useful resources that save me $$$ while traveling',
         donations_title: 'Donations',
         donations_description: 'Support my work',
+        stripe_donation_title: 'Donate via Stripe',
+        stripe_donation_description: 'Support me with a secure card donation',
         consultation_title: 'Consultation',
         consultation_description: 'Book a consultation with me',
         footer_text: '© 2025 Motohorek. All rights reserved.'

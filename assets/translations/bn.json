@@ -26,5 +26,7 @@
     "crypto_description": "Bitcoin বা Ethereum দিয়ে দান করুন",
     "zelle_title": "Zelle",
     "copy_email_button": "ইমেইল কপি করুন",
+    "stripe_donation_title": "Stripe এর মাধ্যমে দান করুন",
+    "stripe_donation_description": "নিরাপদ কার্ড দান দিয়ে আমাকে সমর্থন করুন",
     "footer_text": "© 2025 Motohorek. সমস্ত অধিকার সংরক্ষিত।"
 }

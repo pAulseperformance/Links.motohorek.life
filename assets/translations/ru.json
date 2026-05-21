@@ -24,6 +24,8 @@
     "crypto_description": "Поддержка через криптовалюту",
     "zelle_title": "Zelle",
     "copy_email_button": "Скопировать email",
+    "stripe_donation_title": "Донат через Stripe",
+    "stripe_donation_description": "Поддержите безопасным донатом картой",
     "consultation_title": "Консультация",
     "consultation_description": "Забронируйте консультацию со мной",
     "footer_text": "© 2025 Motohorek. Все права защищены."

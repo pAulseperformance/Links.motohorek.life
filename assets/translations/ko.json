@@ -26,5 +26,7 @@
     "crypto_description": "Bitcoin 또는 Ethereum으로 후원",
     "zelle_title": "Zelle",
     "copy_email_button": "이메일 복사",
+    "stripe_donation_title": "Stripe로 후원",
+    "stripe_donation_description": "안전한 카드로 후원하기",
     "footer_text": "© 2025 Motohorek. 모든 권리 보유."
 }

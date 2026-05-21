@@ -26,5 +26,7 @@
     "crypto_description": "Bitcoin یا Ethereum سے عطیہ کریں",
     "zelle_title": "Zelle",
     "copy_email_button": "ای میل کاپی کریں",
+    "stripe_donation_title": "Stripe کے ذریعے عطیہ دیں",
+    "stripe_donation_description": "محفوظ کارڈ عطیہ سے میری حمایت کریں",
     "footer_text": "© 2025 Motohorek. تمام حقوق محفوظ ہیں۔"
 }
